@@ -1,0 +1,37 @@
+h1{
+    color: green;
+    font-family: sans-serif;
+}
+p{
+    color: coral;
+    font-family: fantasy;
+}
+ul {
+    list-style-type: circle;
+}
+ol{
+    list-style-type: upper-roman;
+}
+ul{
+    list-style-image: url('images/pointer-icon.png');
+}
+a{
+font-family : Helvetica, sans-serif;
+text-decoration : none;
+background-color: aquamarine;
+padding : 5px;
+}
+a:hover{
+background-color: aqua;
+color : #ffffff;
+}
+#menu-bar a{
+font-family: Helvetica, sans-serif;
+text-decoration: none;
+background-color: aquamarine;
+padding: 5px;
+}
+#menu-bar a:hover{
+background-color: aqua;
+color: #ffffff;
+}
