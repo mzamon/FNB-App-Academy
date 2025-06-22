@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Parameters</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Function Parameters</h1>
+        <p id="addition"></p>
+
+        <div class="code-container">
+            <h3>Code Example:</h3>
+            <pre>
+addNumbers(10, 7);
+        
+function addNumbers(num1, num2){
+    document.getElementById("addition").innerHTML = 
+        num1 + " + " + num2 + " = " + (num1 + num2);
+}
+            </pre>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <script>
+            addNumbers(10, 7);
+            
+            function addNumbers(num1, num2){
+                document.getElementById("addition").innerHTML = 
+                    num1 + " + " + num2 + " = " + (num1 + num2);
+            }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Login Form</h1>
+        <form>
+            <label for="usernameInput">Username:</label>
+            <input type="text" id="usernameInput"/><br/>
+            <label for="passwordInput">Password:</label>
+            <input type="password" id="passwordInput"/><br/>
+            <button type="button" onclick="verifyUser()">Login</button>
+        </form>
+        <p id="message"></p>
+
+        <div class="code-container">
+            <h3>Code Example:</h3>
+            <pre>
+function verifyUser(){
+    var username = document.getElementById("usernameInput").value;
+    var password = document.getElementById("passwordInput").value;
+    checkUserCreds(username, password);
+}
+        
+function checkUserCreds(username, password) {
+    var systemUsername = "Bond";
+    var systemPassword = "007";
+    
+    if(username == systemUsername && password == systemPassword){
+        document.getElementById("message").innerHTML = "Correct. Logging you in...";
+        document.getElementById("message").className = "message success";
+    } else {
+        document.getElementById("message").innerHTML = "Username or password is incorrect";
+        document.getElementById("message").className = "message error";
+    }
+}
+            </pre>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <script>
+            function verifyUser(){
+                var username = document.getElementById("usernameInput").value;
+                var password = document.getElementById("passwordInput").value;
+                checkUserCreds(username, password);
+            }
+            
+            function checkUserCreds(username, password) {
+                var systemUsername = "Bond";
+                var systemPassword = "007";
+                
+                if(username == systemUsername && password == systemPassword){
+                    document.getElementById("message").innerHTML = "Correct. Logging you in...";
+                    document.getElementById("message").className = "message success";
+                } else {
+                    document.getElementById("message").innerHTML = "Username or password is incorrect";
+                    document.getElementById("message").className = "message error";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

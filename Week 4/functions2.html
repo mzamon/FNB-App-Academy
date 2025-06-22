@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions Continued</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Functions Continued</h1>
+        <h2 id="heading" onclick="changeText()">JavaScript</h2>
+        <p>Click the heading to toggle text</p>
+
+        <div class="code-container">
+            <h3>Code Example:</h3>
+            <pre>
+function changeText(){
+    if(document.getElementById("heading").innerHTML == 'JavaScript'){
+        document.getElementById("heading").innerHTML = 'is awesome';
+    } else {
+        document.getElementById("heading").innerHTML = 'JavaScript';
+    }
+}
+            </pre>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <script>
+            function changeText(){
+                if(document.getElementById("heading").innerHTML == 'JavaScript'){
+                    document.getElementById("heading").innerHTML = 'is awesome';
+                } else {
+                    document.getElementById("heading").innerHTML = 'JavaScript';
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

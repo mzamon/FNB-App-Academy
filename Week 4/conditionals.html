@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conditionals</h1>
+        <h2>Password Checker</h2>
+        <p id="output">Enter password: 007 or 008</p>
+
+        <div class="code-container">
+            <h3>Code Example:</h3>
+            <pre>
+var userInputPassword = "008";
+var actualPassword = "007";
+        
+if(userInputPassword == actualPassword){
+    document.getElementById("output").innerHTML = "Correct password";
+} else {
+    document.getElementById("output").innerHTML = "Incorrect password. Try again";
+}
+            </pre>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <script>
+            var userInputPassword = "008";
+            var actualPassword = "007";
+            
+            if(userInputPassword == actualPassword){
+                document.getElementById("output").innerHTML = "Correct password";
+                document.getElementById("output").className = "message success";
+            } else {
+                document.getElementById("output").innerHTML = "Incorrect password. Try again";
+                document.getElementById("output").className = "message error";
+            }
+        </script>
+    </div>
+</body>
+</html>

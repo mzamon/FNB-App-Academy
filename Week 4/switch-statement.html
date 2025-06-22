@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Advisor</h1>
+        <select id="weather" onchange="getAdvice()">
+            <option value="">Select weather</option>
+            <option value="sunny">Sunny</option>
+            <option value="windy">Windy</option>
+            <option value="rainy">Rainy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+        <p id="advice" class="message"></p>
+
+        <div class="code-container">
+            <h3>Code Example:</h3>
+            <pre>
+function getAdvice() {
+    var weatherSelected = document.getElementById("weather").value;
+    var advice = "";
+    
+    switch(weatherSelected){
+        case "sunny":
+            advice = "Wear your sunglasses and sunscreen";
+            break;
+        case "windy":
+            advice = "Wear a jacket and hold onto your hat";
+            break;
+        case "rainy":
+            advice = "Bring an umbrella and wear waterproof shoes";
+            break;
+        case "snowy":
+            advice = "Wear warm clothes and boots";
+            break;
+        default:
+            advice = "Select a weather condition to get advice";
+    }
+    
+    document.getElementById("advice").innerHTML = advice;
+}
+            </pre>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <script>
+            function getAdvice() {
+                var weatherSelected = document.getElementById("weather").value;
+                var advice = "";
+                
+                switch(weatherSelected){
+                    case "sunny":
+                        advice = "Wear your sunglasses and sunscreen";
+                        break;
+                    case "windy":
+                        advice = "Wear a jacket and hold onto your hat";
+                        break;
+                    case "rainy":
+                        advice = "Bring an umbrella and wear waterproof shoes";
+                        break;
+                    case "snowy":
+                        advice = "Wear warm clothes and boots";
+                        break;
+                    default:
+                        advice = "Select a weather condition to get advice";
+                }
+                
+                document.getElementById("advice").innerHTML = advice;
+            }
+        </script>
+    </div>
+</body>
+</html>
