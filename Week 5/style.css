@@ -1,0 +1,136 @@
+:root {
+    --orange: #FF9500;
+    --light-orange: #ffb143;
+    --dark-grey: #505050;
+    --medium-grey: #D4D4D2;
+    --light-grey: #f5f5f5;
+    --black: #1C1C1C;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.calculator {
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--black);
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+    padding: 40px 30px 20px;
+    font-size: 4.5rem;
+    font-weight: 300;
+    text-align: right;
+    min-height: 120px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 20px;
+}
+
+.btn {
+    border: none;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.number {
+    background-color: var(--dark-grey);
+    color: white;
+}
+
+.number:hover {
+    background-color: #606060;
+}
+
+.zero {
+    grid-column: span 2;
+    border-radius: 50px;
+    aspect-ratio: 2/1;
+    justify-content: flex-start;
+    padding-left: 32px;
+}
+
+.operator {
+    background-color: var(--orange);
+    color: white;
+    font-size: 2rem;
+}
+
+.operator:hover {
+    background-color: var(--light-orange);
+}
+
+.ac, .sign, .percent {
+    background-color: var(--medium-grey);
+    color: var(--black);
+}
+
+.ac:hover, .sign:hover, .percent:hover {
+    background-color: var(--light-grey);
+}
+
+.equals {
+    background-color: var(--orange);
+}
+body {
+  background: linear-gradient(135deg, #2c3e50, #1C1C1C);
+}
+
+@media (max-width: 500px) {
+    .display {
+        font-size: 3.5rem;
+        padding: 30px 20px 15px;
+        min-height: 100px;
+    }
+    
+    .btn {
+        font-size: 1.5rem;
+    }
+    
+    .operator {
+        font-size: 1.7rem;
+    }
+}
