@@ -81,12 +81,6 @@
         </section>
     </main>
 
-     <script>
-        // Redirect to API key entry if no key is configured
-        if (!localStorage.getItem('contactBookApiKey') && 
-            !window.location.pathname.endsWith('enter-api-key.html')) {
-            window.location.href = 'enter-api-key.html';
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

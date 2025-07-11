@@ -1,37 +1,69 @@
-h1{
+/* Typography */
+h1 {
     color: green;
     font-family: sans-serif;
 }
-p{
+
+p {
     color: coral;
     font-family: fantasy;
 }
+
+/* Lists */
 ul {
     list-style-type: circle;
-}
-ol{
-    list-style-type: upper-roman;
-}
-ul{
     list-style-image: url('images/pointer-icon.png');
 }
-a{
-font-family : Helvetica, sans-serif;
-text-decoration : none;
-background-color: aquamarine;
-padding : 5px;
+
+ol {
+    list-style-type: upper-roman;
 }
-a:hover{
-background-color: aqua;
-color : #ffffff;
+
+/* Global Links */
+a {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
 }
-#menu-bar a{
-font-family: Helvetica, sans-serif;
-text-decoration: none;
-background-color: aquamarine;
-padding: 5px;
+
+a:hover {
+    background-color: aqua;
+    color: #ffffff;
 }
-#menu-bar a:hover{
-background-color: aqua;
-color: #ffffff;
+
+/* Menu Bar Styles */
+#menu-bar {
+    margin: 10px 0;
+}
+
+#menu-bar a {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#menu-bar a:hover {
+    background-color: aqua;
+    color: #ffffff;
+}
+
+/* External Links Section */
+.external-links {
+    margin-top: 20px;
+}
+
+.external-links a {
+    display: block;
+    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.external-links a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: inherit;
 }

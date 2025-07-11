@@ -1,29 +1,107 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <p>Hello everyone</p>
-        <p>This is fun</p> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Styled Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Text Content -->
+    <p>Hello everyone</p>/* Typography */
+h1 {
+    color: green;
+    font-family: sans-serif;
+}
+
+p {
+    color: coral;
+    font-family: fantasy;
+}
+
+/* Lists */
+ul {
+    list-style-type: circle;
+    list-style-image: url('images/pointer-icon.png');
+}
+
+ol {
+    list-style-type: upper-roman;
+}
+
+/* Global Links */
+a {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: aqua;
+    color: #ffffff;
+}
+
+/* Menu Bar Styles */
+#menu-bar {
+    margin: 10px 0;
+}
+
+#menu-bar a {
+    font-family: Helvetica, sans-serif;
+    text-decoration: none;
+    background-color: aquamarine;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+#menu-bar a:hover {
+    background-color: aqua;
+    color: #ffffff;
+}
+
+/* External Links Section */
+.external-links {
+    margin-top: 20px;
+}
+
+.external-links a {
+    display: block;
+    margin-bottom: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+.external-links a:hover {
+    text-decoration: underline;
+    background-color: transparent;
+    color: inherit;
+}
+    <p>This is fun</p> 
     
-        <h1>Home page</h1>
-        <h2>This is heading 2</h2>
-        <h3>This is heading 3</h3>
-        <h4>This is heading 4</h4>
-        <h5>This is heading 5</h5>
-        <h6>This is heading 6</h6>
+    <!-- Headings -->
+    <h1>Home page</h1>
+    <h2>This is heading 2</h2>
+    <h3>This is heading 3</h3>
+    <h4>This is heading 4</h4>
+    <h5>This is heading 5</h5>
+    <h6>This is heading 6</h6>
     
-        <img src="friends.jpg" height="150"/>
+    <!-- Image -->
+    <img src="friends.jpg" alt="Friends image" height="150">
     
-        <div id="menu-bar">
+    <!-- Navigation Menu -->
+    <div id="menu-bar">
         <a href="index.html">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        </div>
+    </div>
 
-        <a href="http://www.google.com">Click here to go to Google</a>
-        <a href="http://www.itvarsity.org">Click here to go to IT varsity</a>
-        <a href="friends.html"><img src="friends.jpg" height="150"/></a>
-    </body>    
+    <!-- External Links -->
+    <div class="external-links">
+        <a href="http://www.google.com" target="_blank">Click here to go to Google</a>
+        <a href="http://www.itvarsity.org" target="_blank">Click here to go to IT varsity</a>
+        <a href="friends.html"><img src="friends.jpg" alt="Friends thumbnail" height="150"></a>
+    </div>
+</body>
 </html>

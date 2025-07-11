@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My App</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="root">
+    <nav>
+      <a href="/">Home</a>
+      <a href="/cart">Cart</a>
+    </nav>
+
+    <div class="page">
+      {% block content %}{% endblock %}
+    </div>
+
+    <div class="read-the-docs">
+      Click on the logos to learn more
+    </div>
+  </div>
+</body>
+</html>

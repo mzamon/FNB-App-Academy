@@ -93,9 +93,13 @@ section {
     margin-bottom: 3px;
 }
 
+.contact-actions {
+    display: flex;
+    gap: 10px;
+}
+
 .contact-actions button {
     padding: 5px 10px;
-    margin-left: 5px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
@@ -186,6 +190,7 @@ form button[type="button"]:hover {
 #deleteContact:hover {
     background-color: #c0392b;
 }
+
 /* API Key Page Styles */
 .api-key-container {
     max-width: 500px;
@@ -200,6 +205,25 @@ form button[type="button"]:hover {
     text-align: center;
     margin-bottom: 20px;
     color: #2c3e50;
+}
+
+.api-key-container .form-group {
+    margin-bottom: 20px;
+}
+
+.api-key-container button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.api-key-container button[type="submit"]:hover {
+    background-color: #2980b9;
 }
 
 .hint {

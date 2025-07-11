@@ -1,0 +1,91 @@
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --primary: 222.2 47.4% 11.2%;
+  --primary-foreground: 210 40% 98%;
+  --destructive: 0 84.2% 60.2%;
+  --border: 214.3 31.8% 91.4%;
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .spin {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  margin: 1em 0;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Navigation styles */
+nav {
+  margin-bottom: 2rem;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: hsl(var(--primary));
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Page specific styles */
+.page {
+  padding: 2rem 0;
+}
+
+.not-found {
+  color: hsl(var(--destructive));
+}

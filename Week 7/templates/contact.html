@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Book App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contact Book</h1>
+            <p>Manage your contacts efficiently using Flask & Python</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add New Contact</h2>
+            <form id="contactForm">
+                <input type="hidden" id="contactId">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="phone" placeholder="Phone" required>
+                <button type="submit">Save Contact</button>
+            </form>
+        </section>
+
+        <section class="search-section">
+            <input type="text" id="search" placeholder="Search Contacts...">
+        </section>
+
+        <section class="list-section">
+            <h2>Your Contacts</h2>
+            <div id="contactsContainer"></div>
+        </section>
+    </div>
+
+    <script>
+        function renderContacts(contacts) {
+            const container = document.getElementById('contactsContainer');
+            container.innerHTML = '';
+            contacts.forEach(contact => {
+                container.innerHTML += `
+                    <div class="contact-card">
+                        <h3>${contact.name}</h3>
+                        <p>Email: ${contact.email}</p>
+                        <p>Phone: ${contact.phone}</p>
+                        <button onclick="editContact(${contact.id})">Edit</button>
+                        <button onclick="deleteContact(${contact.id})">Delete</button>
+                    </div>
+                `;
+            });
+        }
+
+        function fetchContacts() {
+            fetch('/contacts')
+                .then(res => res.json())
+                .then(data => renderContacts(data));
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('contactId').value;
+            const payload = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value
+            };
+
+            const url = id ? `/contacts/${id}` : '/contacts';
+            const method = id ? 'PUT' : 'POST';
+
+            fetch(url, {
+                method,
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify(payload)
+            }).then(() => {
+                fetchContacts();
+                document.getElementById('contactForm').reset();
+                document.getElementById('contactId').value = '';
+            });
+        });
+
+        function editContact(id) {
+            fetch(`/contacts/${id}`)
+                .then(res => res.json())
+                .then(contact => {
+                    document.getElementById('contactId').value = contact.id;
+                    document.getElementById('name').value = contact.name;
+                    document.getElementById('email').value = contact.email;
+                    document.getElementById('phone').value = contact.phone;
+                });
+        }
+
+        function deleteContact(id) {
+            fetch(`/contacts/${id}`, { method: 'DELETE' })
+                .then(() => fetchContacts());
+        }
+
+        document.getElementById('search').addEventListener('input', function() {
+            const value = this.value.toLowerCase();
+            const cards = document.querySelectorAll('.contact-card');
+            cards.forEach(card => {
+                const name = card.querySelector('h3').textContent.toLowerCase();
+                card.style.display = name.includes(value) ? 'block' : 'none';
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', fetchContacts);
+    </script>
+</body>
+</html>
+<!-- This is the main page of the Contact Book App. It provides a form to add new contacts, a search bar, and a list of existing contacts. -->
+<!-- The page is styled using an external CSS file located at /static/style.css. -->
